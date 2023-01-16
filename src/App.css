@@ -1,3 +1,6 @@
+::-webkit-scrollbar {
+  display: none;
+}
 
   nav {
     z-index: 10;
@@ -6,9 +9,8 @@
     border-left: 23px ridge #ff0000;
     border-radius: 0px 27px 0px 31px;
   }
-  body,
+  body,html,
   .body-better {
-    background-color: #2d3436 !important;
     background-image: linear-gradient(-85deg, #2d3436 0%, #000000 74%) !important;
   color: #e0dfdc;
   zoom: 100%;
@@ -127,3 +129,12 @@
       flex-direction: row !important;
     }
   }
+
+  @media screen and (min-width: 750px) {
+    .fs-md-small{
+      font-size: 1rem !important;
+    }
+  }
+
+
+ 

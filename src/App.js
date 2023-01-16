@@ -18,17 +18,10 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 
 function App() {
   useEffect(() => {
-      AOS.init({
-        duration:600,
-      });
-      AOS.refresh();
-     const handleClick = () => {
-        setTimeout(() => {
-          this.setState({
-            clicked: true
-          });
-        }, 3000);
-      }
+    AOS.init({
+      duration: 600,
+    });
+    AOS.refresh();
   }, []);
   return (
     <div
@@ -41,61 +34,58 @@ function App() {
         bg="light"
         expand="md"
         className="navbar-light navBg min-vw-100 position-reletive z-5"
-        style={{ height: "auto", minHeight: "6vh",}}
+        style={{ height: "auto", minHeight: "6vh" }}
       >
         <Container fluid className="">
-          <Navbar.Brand href="#home" className="text-white ms-0 ms-md-5 hover logo">
+          <Navbar.Brand
+            href="#home"
+            className="text-white ms-0 ms-md-5 hover logo"
+          >
             MyPortfolio
           </Navbar.Brand>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md`} />
-            <Navbar.Offcanvas
+          <Navbar.Offcanvas
             className="bg-dark"
-              id={`offcanvasNavbar-expand-md`}
-              aria-labelledby={`offcanvasNavbarLabel-expand-md`}
-              placement="top"
-            >
-              <Offcanvas.Header closeButton className="closeBtn" >
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-md`}
+            id={`offcanvasNavbar-expand-md`}
+            aria-labelledby={`offcanvasNavbarLabel-expand-md`}
+            placement="end"
+          >
+            <Offcanvas.Header closeButton className="closeBtn">
+              <Offcanvas.Title
+                id={`offcanvasNavbarLabel-expand-md`}
                 className="logo"
+              >
+                MyPortfolio
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body className="d-flex justify-content-center align-items-center">
+              <Nav className="justify-content-center align-items-center flex-grow-1 pe-3 d-flex gap-5 gap-md-0">
+                <Nav.Link
+                  className="active text-muted navHover align-text-center d-block mx-5 m-md-0 fs-md-small fs-1"
+                  href="#home"
                 >
-                  MyPortfolio
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav className="justify-content-center align-items-center flex-grow-1 pe-3 ">
-              <Nav.Link
-                href="#home"
-                className="active text-muted navHover"
-              >
-                Home
-              </Nav.Link>
-              <Nav.Link
-                href="#about"
-                className="active text-muted navHover align-text-center d-block"
-                data-aos-once="true"
-                data-delay="100"
-              >
-                About me
-              </Nav.Link>
-              <Nav.Link
-                href="#contact"
-                className="active text-muted navHover"
-                data-aos-once="true"
-                data-delay="200"
-              >
-                contact
-              </Nav.Link>
-              <Nav.Link
-                href="#projects"
-                className="active text-muted navHover"
-                data-aos-once="true"
-                data-delay="300"
-              >
-                projects
-              </Nav.Link>
-            </Nav>
-          </Offcanvas.Body>
-            </Navbar.Offcanvas>
+                  Home
+                </Nav.Link>
+                <Nav.Link className="active text-muted navHover align-text-center d-block mx-5 m-md-0 fs-md-small fs-1">
+                  About me
+                </Nav.Link>
+                <Nav.Link
+                  href="#contact"
+                  className="active text-muted navHover mx-5 m-md-0 fs-md-small fs-1"
+                  data-aos-once="true"
+                  data-delay="200"
+                >
+                  Projects
+                </Nav.Link>
+                <Nav.Link
+                  href="#projects"
+                  className="active text-muted navHover mx-5 m-md-0 fs-md-small fs-1"
+                >
+                  Contacts
+                </Nav.Link>
+              </Nav>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
         </Container>
       </Navbar>
       <section
@@ -132,17 +122,13 @@ function App() {
       >
         <Container className="sclae-xl-2">
           <div className="w-100 h-auto justify-content-start d-flex mb-1 hover">
-            <h1
-            data-aos="fade-right"
-            data-aos-delay="100"
-            >About me and my skills</h1>
+            <h1 data-aos="fade-right" data-aos-delay="100">
+              About me and my skills
+            </h1>
           </div>
           <div className="w-100 h-75 d-flex flex-column flex-md-row container gap-4 p-0">
             <div className="d-flex justify-content-center align-items-center hover">
-              <p 
-              data-aos="fade-left"
-               data-aos-delay="100"
-               >
+              <p data-aos="fade-left" data-aos-delay="100">
                 My name is Donatas and am i junior junior Web Delevoper is
                 started coding in 2022. My goal is to beacome full stack
                 delevoper. And this is my jurny of becoming a Full Stack
@@ -152,29 +138,32 @@ function App() {
             </div>
             <div className="w-100 h-100 d-flex align-items-center justify-content-center p-0">
               <ul className="bars d-flex m-2 m-md-0 flex-column h-100 w-100">
-
-                <li className="bar mb-2 hover"
+                <li
+                  className="bar mb-2 hover"
                   data-aos="fade-up"
-                  data-aos-delay="0">
+                  data-aos-delay="0"
+                >
                   <div className="bar-inner mw-md-100">
                     <div className="bar-outer"></div>
                   </div>
                   <span>JavaScript</span>
                 </li>
 
-                <li className="bar mb-2 hover"
-                data-aos="fade-up"
-                data-aos-delay="100"
+                <li
+                  className="bar mb-2 hover"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
                 >
-                  <div className="bar-inner mw-md-100" >
+                  <div className="bar-inner mw-md-100">
                     <div className="bar-outer"></div>
                   </div>
                   <span>CSS</span>
                 </li>
 
-                <li className="bar mb-2 hover"
-                data-aos="fade-up"
-                data-aos-delay="200"
+                <li
+                  className="bar mb-2 hover"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
                 >
                   <div className="bar-inner mw-md-100">
                     <div className="bar-outer"></div>
@@ -182,9 +171,10 @@ function App() {
                   <span>Html</span>
                 </li>
 
-                <li className="bar mb-2 hover"
-                data-aos="fade-up"
-                data-aos-delay="300"
+                <li
+                  className="bar mb-2 hover"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
                 >
                   <div className="bar-inner mw-md-100">
                     <div className="bar-outer"></div>
@@ -197,10 +187,11 @@ function App() {
         </Container>
       </section>
       <section id="projects" className="min-vh-100 position-relative">
-        <Container className="w-100 min-vh-100 d-flex justify-content-center align-items-center flex-column"
-                        data-aos="fade-left"
-                        data-aos-duration="1000"
-                        data-aos-delay="200"
+        <Container
+          className="w-100 min-vh-100 d-flex justify-content-center align-items-center flex-column"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="200"
         >
           <Container fluid className="d-flex justify-content-center d-md-block">
             <div className="w-auto">
@@ -211,63 +202,59 @@ function App() {
             <Carousel>
               <Carousel.Item>
                 <a href="https://MonumentalWideRoute.donatastumenas.repl.co">
-                <img
-                  className="d-block w-100"
-                  src="https://media.discordapp.net/attachments/886674559875571723/1063475219051855892/image.png"
-                  alt="Boom"
-                />
+                  <img
+                    className="d-block w-100"
+                    src="https://media.discordapp.net/attachments/886674559875571723/1063475219051855892/image.png"
+                    alt="Boom"
+                  />
                 </a>
-                
               </Carousel.Item>
               <Carousel.Item>
                 <a href="https://SCR.donatastumenas.repl.co">
-                <img
-                  className="d-block w-100"
-                  src="https://media.discordapp.net/attachments/886674559875571723/1063475398492557352/image.png"
-                  alt="RPC"
-                />
+                  <img
+                    className="d-block w-100"
+                    src="https://media.discordapp.net/attachments/886674559875571723/1063475398492557352/image.png"
+                    alt="RPC"
+                  />
                 </a>
-               
-
               </Carousel.Item>
               <Carousel.Item>
                 <a href="https://Nuke.donatastumenas.repl.co">
-                <img
-                  className="d-block w-100"
-                  src="https://media.discordapp.net/attachments/886674559875571723/1063475621860212787/image.png"
-                  alt="Nuke"
-                />
+                  <img
+                    className="d-block w-100"
+                    src="https://media.discordapp.net/attachments/886674559875571723/1063475621860212787/image.png"
+                    alt="Nuke"
+                  />
                 </a>
               </Carousel.Item>
 
               <Carousel.Item>
                 <a href="https://sing-up.donatastumenas.repl.co">
-                <img
-                  className="d-block w-100"
-                  src="https://media.discordapp.net/attachments/886674559875571723/1063475914962386975/image.png"
-                  alt="Sing-in"
-                />
+                  <img
+                    className="d-block w-100"
+                    src="https://media.discordapp.net/attachments/886674559875571723/1063475914962386975/image.png"
+                    alt="Sing-in"
+                  />
                 </a>
-                
               </Carousel.Item>
 
               <Carousel.Item>
                 <a href="https://tic-tack.donatastumenas.repl.co">
-                <img
-                  className="d-block w-100"
-                  src="https://media.discordapp.net/attachments/886674559875571723/1063476310225203240/image.png"
-                  alt="Tik-Tak"
-                />
+                  <img
+                    className="d-block w-100"
+                    src="https://media.discordapp.net/attachments/886674559875571723/1063476310225203240/image.png"
+                    alt="Tik-Tak"
+                  />
                 </a>
               </Carousel.Item>
 
               <Carousel.Item>
                 <a href="https://nice-spin.donatastumenas.repl.co">
-                <img
-                  className="d-block w-100"
-                  src="https://media.discordapp.net/attachments/886674559875571723/1063476638827946084/image.png"
-                  alt="spin"
-                />
+                  <img
+                    className="d-block w-100"
+                    src="https://media.discordapp.net/attachments/886674559875571723/1063476638827946084/image.png"
+                    alt="spin"
+                  />
                 </a>
               </Carousel.Item>
             </Carousel>
@@ -276,38 +263,50 @@ function App() {
       </section>
       <section
         id="contact"
-        className="min-vh-100 d-flex flex-column justify-content-center"
+        className="min-vh-100 w-100 d-flex flex-column justify-content-center"
       >
-        <div className="m-5">
-          <div className="container-float mb-5">
-            <h1>Contact Me</h1>
+        <Container className="w-100 min-vh-100 px-2">
+          <div>
+          <div className="mb-5">
+            <h1 className="">Contact Me</h1>
           </div>
-          <div className="mb-3">
-            <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+          <div className="my-5">
+            <div
+              className="mx-5 my-3"
+              style={{
+                maxWidth: "100rem",
+              }}
+            >
+              <Form.Group className="mb-3 w-100" controlId="formBasicEmail ">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
                 <Form.Text className="text-muted">
-                  We'll never share your email with anyone else.
+                  I will never share your email with anyone else.
                 </Form.Text>
               </Form.Group>
-            </Form>
+            </div>
+            <div
+              className="mx-5 my-3"
+              style={{
+                maxWidth: "100rem",
+              }}
+            >
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Enter your Message</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter your message"
+                ></Form.Control>
+              </Form.Group>
+            </div>
           </div>
-          <div className="mb-3">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Enter your Message</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Enter your message"
-              ></Form.Control>
-            </Form.Group>
           </div>
-        </div>
+        </Container>
       </section>
       <section>
-        <Container fluid className="d-flex justify-content-start bg-dark">
-          <h1 class="ms-5" style={{ fontSize: "2vw" }}>
-            ©2022 copyrights: Donatas Tumėnas
+        <Container fluid className="d-flex justify-content-center bg-dark">
+          <h1 class="m-0" style={{ fontSize: "1.5vh" }}>
+            ©2023 copyrights: Donatas Tumėnas
           </h1>
         </Container>
       </section>
