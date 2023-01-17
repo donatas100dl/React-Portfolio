@@ -66,11 +66,13 @@ function App() {
                 >
                   Home
                 </Nav.Link>
-                <Nav.Link className="active text-muted navHover align-text-center d-block mx-5 m-md-0 fs-md-small fs-1">
+                <Nav.Link className="active text-muted navHover align-text-center d-block mx-5 m-md-0 fs-md-small fs-1"
+                href="#about"
+                >
                   About me
                 </Nav.Link>
                 <Nav.Link
-                  href="#contact"
+                  href="#projects"
                   className="active text-muted navHover mx-5 m-md-0 fs-md-small fs-1"
                   data-aos-once="true"
                   data-delay="200"
@@ -78,7 +80,7 @@ function App() {
                   Projects
                 </Nav.Link>
                 <Nav.Link
-                  href="#projects"
+                  href="#contact"
                   className="active text-muted navHover mx-5 m-md-0 fs-md-small fs-1"
                 >
                   Contacts
@@ -263,7 +265,7 @@ function App() {
       </section>
       <section
         id="contact"
-        className="min-vh-100 w-100 d-flex flex-column justify-content-center"
+        className="min-vh-100 w-100 d-flex flex-column justify-content-center mt-5"
       >
         <Container className="w-100 min-vh-100 px-2">
           <div>
