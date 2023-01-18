@@ -1,0 +1,147 @@
+.navbar {
+  display: flex;
+  padding: 0.8em;
+  background-image: linear-gradient(90deg, #000000 0%, #101113 74%) !important;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+li {
+  list-style: none;
+}
+.hamburger{
+    margin-right: 1.5em;
+    scale: 1.7;
+}
+.navLinks {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  gap: 2em;
+  margin: 0;
+}
+.navBrand {
+  transition: all 0.2s ease-in !important;
+  margin-left: 1em;
+  float: left;
+}
+.navBrand:hover {
+  scale: 1.09;
+}
+.navBrand a {
+  margin-bottom: 0;
+  font-size: 1.5em;
+  font-weight: 50;
+  text-shadow: 3px 3px 5px rgb(206, 0, 0);
+}
+.navBrand a:hover {
+  transform: scale(1.09);
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navLink a {
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+.navLink a:hover {
+  transform: scale(1.07);
+  color: #e0dfdcc9 !important;
+  font-size: 1.2rem;
+}
+.navHover {
+  transition: all 0.2s ease-in !important;
+}
+.navHover:hover {
+  transform: scale(1.07);
+  color: #e0dfdcc9 !important;
+}
+.nav-box {
+    position: fixed;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: transparent;
+    visibility: visible;
+    z-index: 20;
+}
+.nav-box-body{
+    transition: all 0.3 linear !important;
+    position: absolute;
+    right: 0;
+    background-color: rgba(32, 32, 32, 0.726);
+    min-height: 100%;
+    min-width: 20rem;
+    width: 60%;
+}
+.nav-box-off{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 100%;
+    backdrop-filter: blur(2.5px);
+}
+.nav-box-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+}
+.nav-box-navHead{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+.closeBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+.nav-box-navMain{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.nav-box-navLinks{
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.hide {
+  display: none;
+}
+.collapsed-nav {
+  display: none;
+}
+.collapsed-hamburger {
+  display: flex;
+}
+@media screen and (min-width: 750px) {
+  .fs-md-small {
+    font-size: 1rem !important;
+  }
+  .collapsed-nav {
+    display: flex;
+  }
+  .collapsed-hamburger {
+    display: none;
+  }
+  .navBrand {
+    margin-left: 5em;
+  }
+}

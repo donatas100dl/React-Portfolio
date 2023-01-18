@@ -1,10 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import Navbar from "./Navbar";
 import {
-  Navbar,
   Container,
   Form,
-  Nav,
   Card,
   Row,
   Col,
@@ -16,6 +15,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -23,6 +23,7 @@ function App() {
     });
     AOS.refresh();
   }, []);
+
   return (
     <div
       className="app"
@@ -30,66 +31,7 @@ function App() {
         cursor: "default",
       }}
     >
-      <Navbar
-        bg="light"
-        expand="md"
-        className="navbar-light navBg min-vw-100 position-reletive z-5"
-        style={{ height: "auto", minHeight: "6vh" }}
-      >
-        <Container fluid className="">
-          <Navbar.Brand
-            href="#home"
-            className="text-white ms-0 ms-md-5 hover logo"
-          >
-            MyPortfolio
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md`} />
-          <Navbar.Offcanvas
-            className="bg-dark"
-            id={`offcanvasNavbar-expand-md`}
-            aria-labelledby={`offcanvasNavbarLabel-expand-md`}
-            placement="end"
-          >
-            <Offcanvas.Header closeButton className="closeBtn">
-              <Offcanvas.Title
-                id={`offcanvasNavbarLabel-expand-md`}
-                className="logo"
-              >
-                MyPortfolio
-              </Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body className="d-flex justify-content-center align-items-center">
-              <Nav className="justify-content-center align-items-center flex-grow-1 pe-3 d-flex gap-5 gap-md-0">
-                <Nav.Link
-                  className="active text-muted navHover align-text-center d-block mx-5 m-md-0 fs-md-small fs-1"
-                  href="#home"
-                >
-                  Home
-                </Nav.Link>
-                <Nav.Link className="active text-muted navHover align-text-center d-block mx-5 m-md-0 fs-md-small fs-1"
-                href="#about"
-                >
-                  About me
-                </Nav.Link>
-                <Nav.Link
-                  href="#projects"
-                  className="active text-muted navHover mx-5 m-md-0 fs-md-small fs-1"
-                  data-aos-once="true"
-                  data-delay="200"
-                >
-                  Projects
-                </Nav.Link>
-                <Nav.Link
-                  href="#contact"
-                  className="active text-muted navHover mx-5 m-md-0 fs-md-small fs-1"
-                >
-                  Contacts
-                </Nav.Link>
-              </Nav>
-            </Offcanvas.Body>
-          </Navbar.Offcanvas>
-        </Container>
-      </Navbar>
+<Navbar></Navbar>
       <section
         id="home"
         className="min-vh-100 min-vw-100 mt-0 d-flex justify-content-center align-items-center"
